@@ -1,0 +1,11 @@
+version: 2
+sources:
+
+- name: data
+  schema: team_3
+  tables:
+    - name: customers
+    - name: discount_coupon
+    - name: marketing_spend
+    - name: online_sales 
+    - name: tax_amount 
