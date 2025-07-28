@@ -22,5 +22,5 @@ o.TRANSACTION_DAY_OF_WEEK
 FROM {{ref('prep_online_sales')}} o
 LEFT JOIN {{ref('prep_customers')}} c USING (customer_id)
 LEFT JOIN {{ref('prep_tax_amount')}} t USING (PRODUCT_CATEGORY)
-LEFT JOIN {{ref('prep_marketing_spend')}} PREP_MARKETING_SPEND m ON m."date" = o.TRANSACTION_DATE 
+LEFT JOIN {{ref('prep_marketing_spend')}} m ON m."date" = o.TRANSACTION_DATE 
 LEFT JOIN {{ref('prep_discount_coupon')}} d ON (o.TRANSACTION_MONTH_STR, o.PRODUCT_CATEGORY)   =  (d."month", d.product_category)
