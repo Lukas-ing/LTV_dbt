@@ -1,6 +1,6 @@
 Select o."CustomerID" AS customer_id,
 o."Transaction_ID" AS transaction_id,
-to_date(o."Transaction_Date",'DD/MM/YYY' ) AS transaction_date,
+to_date(o."Transaction_Date",'MM/DD/YYY' ) AS transaction_date,
 o."Product_SKU" AS produkt_sku,
 o."Product_Description" AS product_description,
 o."Product_Category" AS product_category,
