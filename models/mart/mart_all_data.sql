@@ -1,5 +1,5 @@
 SELECT o.CUSTOMER_ID,
-c.GENDER  AS customer_gernder,
+c.GENDER  AS customer_gender,
 c."location" AS customer_location,
 c.TENURE_MONTHS AS customer_tenure_months,
 o.TRANSACTION_ID, 
