@@ -12,6 +12,8 @@ o.DELIVERY_CHARGES,
 o.COUPON_STATUS,
 d.discount_pct,
 t.gst AS gst_onsale,
+m.OFFLINE_SPEND AS offline_spend_that_day, 
+m.ONLINE_SPEND AS online_spend_that_day,
 o.TRANSACTION_YEAR,
 o.TRANSACTION_MONTH,
 o.TRANSACTION_MONTH_STR,
@@ -20,4 +22,5 @@ o.TRANSACTION_DAY_OF_WEEK
 FROM {{ref('prep_online_sales')}} o
 LEFT JOIN {{ref('prep_customers')}} c USING (customer_id)
 LEFT JOIN {{ref('prep_tax_amount')}} t USING (PRODUCT_CATEGORY)
+LEFT JOIN {{ref('prep_marketing_spend')}} PREP_MARKETING_SPEND m ON m."date" = o.TRANSACTION_DATE 
 LEFT JOIN {{ref('prep_discount_coupon')}} d ON (o.TRANSACTION_MONTH_STR, o.PRODUCT_CATEGORY)   =  (d."month", d.product_category)
