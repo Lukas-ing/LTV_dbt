@@ -1,4 +1,5 @@
-SELECT *, 
+SELECT *,
+o.QUANTITY*o.AVG_PRICE+o.DELIVERY_CHARGES AS revenue,
 date_part('year', o."transaction_date") AS transaction_year,
 date_part('month', o."transaction_date" ) AS transaction_month,
 to_char(o."transaction_date",'FMmon') AS transaction_month_str,
