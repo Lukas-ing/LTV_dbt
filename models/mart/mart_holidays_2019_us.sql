@@ -4,7 +4,7 @@ CASE
 	ELSE FALSE 
 END AS religious_holiday,
 CASE 
-	WHEN lower(h.type) IN ('local holiday','local holiday, christian') THEN TRUE 
+	WHEN lower(h.type) IN ('local holiday','local holiday, christian','national holiday, christian','national holiday') THEN TRUE 
 	ELSE FALSE 
 END AS local_holiday,
 CASE 
