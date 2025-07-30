@@ -9,6 +9,7 @@ sources:
     - name: marketing_spend
     - name: online_sales 
     - name: tax_amount 
+    - name: monthly_kpi_summary
 
 
 - name: external
