@@ -4,8 +4,8 @@ order_count,
 TOTAL_REVENUE,
 total_spend,
 online_spend_x AS online_spend,
-"AOV" AS aov,
-"CAC" AS cac,
-"ROAS" AS roas,
-"ROAS_online" AS roas_online
+round("AOV"::numeric,2) AS aov,
+round("CAC"::numeric,2) AS cac,
+round("ROAS"::numeric,2) AS roas,
+round("ROAS_online"::numeric,2) AS roas_online
 FROM {{source('data', 'monthly_kpi_summary')}}
