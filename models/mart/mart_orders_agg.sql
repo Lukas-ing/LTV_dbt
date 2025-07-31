@@ -1,4 +1,4 @@
-SELECT count( distinct o.CUSTOMER_ID), o.TRANSACTION_ID, o.TRANSACTION_DATE,
+SELECT count( distinct o.CUSTOMER_ID) as customers_per_order, o.TRANSACTION_ID, o.TRANSACTION_DATE,
 sum(o.QUANTITY) AS total_quantity, 
 sum(o.DELIVERY_CHARGES) AS total_delivery_charges,
 sum(o.REVENUE) AS total_revenue,
